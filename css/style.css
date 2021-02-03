@@ -1,0 +1,269 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    /* for relative unit and responsiveness so that all the fonts in the webpage are relative to this body font like "in percent unit*20/100= realtive unit" */
+    overflow-x: hidden;
+    color: white;
+    font-family: 'Flamenco', cursive;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/pexels-shattha-pilabut-135620.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+.row {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* .clearfix::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+} */
+
+.logo {
+    height: 112px;
+    width: 208px;
+    float: left;
+    font-size: 34PX;
+    margin-top: 51px;
+    background: transparent;
+    text-shadow: 2px 5px 2px black;
+    border-radius: 33%;
+    color: #bf55ec;
+    /* border-image: url("./images/cafe-clipart-border-5-transparent.png") 30% round; */
+}
+
+.main-nav {
+    float: right;
+    margin-top: 60px;
+}
+
+.main-nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 40px;
+}
+
+.main-nav li a {
+    padding: 5px 5px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 100;
+}
+
+.main-nav li a:hover {
+    border-bottom: 1px solid #bf55ec;
+}
+
+.main-content-header {
+    width: 1180px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* to center the heading */
+}
+
+h1 {
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h2#sec1-head {
+    margin: 20px auto;
+    text-shadow: 2px 3px 4px white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2 s;
+}
+
+.anim {
+    animation: colorchange 1s infinite;
+}
+
+@keyframes colorchange {
+    0% {
+        color: pink;
+    }
+    25% {
+        color: #bf55ec;
+    }
+    50% {
+        color: darkviolet;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.btn-full {
+    background-color: transparent;
+    color: #bf55ec;
+    margin-right: 15px;
+    border: 1px solid #bf55ec;
+}
+
+.btn-full:hover {
+    background-color: white;
+    font-weight: bolder;
+}
+
+.btn-nav {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+}
+
+.btn-nav:hover {
+    background-color: #bf55ec;
+    font-weight: bold;
+}
+
+
+/* responsive Queries */
+
+
+/* dekstop view */
+
+@media only screen and (max-width:1180px) {
+    .main-content-header {
+        width: 100%;
+        padding: 0px 2%;
+    }
+}
+
+@media only screen and (max-width:998px) {
+    h1 {
+        font-size: 200%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    h1 {
+        font-size: 180%;
+    }
+    .main-nav {
+        display: none;
+    }
+    .btn-full,
+    .btn-nav {
+        margin: 10px;
+    }
+}
+
+
+/* section styling*/
+
+section.category {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background: #cf68e8;
+}
+
+.cards {
+    display: flex;
+    margin: 34px;
+    justify-content: space-evenly;
+}
+
+.card1,
+.card2,
+.card3 {
+    height: 45vh;
+    width: 25vw;
+    background-color: white;
+    box-shadow: 5px 6px 9px black;
+    border-radius: 3px;
+    transition: transform 1.2s;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover {
+    transform: scale(1.5, 1.5);
+}
+
+img {
+    height: 37vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width:600px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card1,
+    .card2,
+    .card3 {
+        margin: 20px;
+        width: 90%;
+        height: auto;
+    }
+    h2 {
+        margin: 0 auto;
+    }
+}
+
+
+/* footer styling */
+
+footer {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 109px;
+}
+
+h1#footer-head {
+    font-size: 30px;
+    margin: 10px;
+    text-shadow: 3px 1px 3px #bf55ec;
+}
+
+a.foo-link {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+img.icon-media {
+    width: 25px;
+    height: 25px;
+    margin: 7px;
+}
